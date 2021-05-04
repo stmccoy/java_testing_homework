@@ -1,0 +1,14 @@
+{
+  "name": "hw_jurassic_park_tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dinosaur.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  }
+}

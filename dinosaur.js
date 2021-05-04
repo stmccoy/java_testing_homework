@@ -5,4 +5,4 @@ const Dinosaur = function (species, dietType, averageVisitors) {
     this.averageVisitors = averageVisitors;
 };
 
-module.exports = Dinosaur
+module.exports = Dinosaur;

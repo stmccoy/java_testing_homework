@@ -12,7 +12,7 @@ Park.prototype.removeDinosaur = function(dino){
     let dinosaurIndexNumber = 0;
     for (let dinosaur of this.dinosaurStock){
         if (dinosaur === dino){
-            break
+            break;
         }else{
             dinosaurIndexNumber ++;
         }
@@ -21,10 +21,10 @@ Park.prototype.removeDinosaur = function(dino){
 }
 
 Park.prototype.findDinos = function(dinoSpecies){
-    let dinoList = []
+    let dinoList = [];
     for (let dinosaur of this.dinosaurStock){
         if (dinosaur.species === dinoSpecies){
-            dinoList.push(dinosaur)
+            dinoList.push(dinosaur);
         }
     }
     return dinoList;
@@ -38,37 +38,14 @@ Park.prototype.totalDailyVisitors = function(){
     return totalDailyVisitors;
 };
 
-
-Park.prototype.totalYearlyVisitors = function(ParkTotalDailyVisitors){
-    let totalYearlyVisitors = ParkTotalDailyVisitors * 365;
-    return totalYearlyVisitors
+Park.prototype.totalYearlyVisitors = function(){
+    let totalYearlyVisitors = this.totalDailyVisitors() * 365;
+    return totalYearlyVisitors;
 };
 
-Park.prototype.totalYearlyTicketSales = function(ParkTotalYearlyVisitors){
-    let totalYearlyTicketSales = ParkTotalYearlyVisitors * this.ticketPrice;
+Park.prototype.totalYearlyTicketSales = function(){
+    let totalYearlyTicketSales = this.totalYearlyVisitors() * this.ticketPrice;
     return totalYearlyTicketSales;
 };
 
-
-
-// prior to edit returned this.dinosaurstock not iterable
-// Park.prototype.totalYearlyVisitors = function(){
-//     let totalDailyVisitors = 0;
-//     for (let dinosaur of this.dinosaurStock){
-//         totalDailyVisitors += dinosaur.averageVisitors;
-//     };
-//     return totalDailyVisitors * 365;
-// };
-
-// Park.prototype.totalYearlyTicketSales = function(){
-//     let totalDailyVisitors = 0;
-//     for (let dinosaur of this.dinosaurStock){
-//         totalDailyVisitors += dinosaur.averageVisitors;
-//     };
-//     let totalVisitors = totalDailyVisitors * 365;
-//     return totalVisitors * 20;
-// };
-
-
-
-module.exports = Park
+module.exports = Park;

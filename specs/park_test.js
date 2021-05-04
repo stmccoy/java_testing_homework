@@ -10,9 +10,9 @@ let dinosaur3;
 describe('Park', function(){
     beforeEach(function(){
         park = new Park('Jurassic Park', 20);
-        dinosaur1 = new Dinosaur('t-rex', 0, 1000)
-        dinosaur2 = new Dinosaur('godzilla', 0, 500)
-        dinosaur3 = new Dinosaur('barney', 1, 100)
+        dinosaur1 = new Dinosaur('t-rex', 0, 1000);
+        dinosaur2 = new Dinosaur('godzilla', 0, 500);
+        dinosaur3 = new Dinosaur('barney', 1, 100);
     });
 
     it('should have a name', function(){
@@ -55,7 +55,7 @@ describe('Park', function(){
         park.addDinosaur(dinosaur1);
         park.addDinosaur(dinosaur2);
         park.addDinosaur(dinosaur3);
-        assert.strictEqual(1600, park.totalDailyVisitors())
+        assert.strictEqual(1600, park.totalDailyVisitors());
     });
 
 
@@ -63,15 +63,14 @@ describe('Park', function(){
         park.addDinosaur(dinosaur1);
         park.addDinosaur(dinosaur2);
         park.addDinosaur(dinosaur3);
-        assert.strictEqual(584000, park.totalYearlyVisitors(park.totalDailyVisitors()))
+        assert.strictEqual(584000, park.totalYearlyVisitors());
     });
 
     it('Should be able to calculate total ticket sales for the year', function(){
         park.addDinosaur(dinosaur1);
         park.addDinosaur(dinosaur2);
         park.addDinosaur(dinosaur3);
-        assert.strictEqual(11680000, park.totalYearlyTicketSales(park.totalYearlyVisitors(park.totalDailyVisitors())))        
+        assert.strictEqual(11680000, park.totalYearlyTicketSales());        
     });
-
 });
 

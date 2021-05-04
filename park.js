@@ -39,23 +39,35 @@ Park.prototype.totalDailyVisitors = function(){
 };
 
 
-// prior to edit returned this.dinosaurstock not iterable
-Park.prototype.totalYearlyVisitors = function(){
-    let totalDailyVisitors = 0;
-    for (let dinosaur of this.dinosaurStock){
-        totalDailyVisitors += dinosaur.averageVisitors;
-    };
-    return totalDailyVisitors * 365;
+Park.prototype.totalYearlyVisitors = function(ParkTotalDailyVisitors){
+    let totalYearlyVisitors = ParkTotalDailyVisitors * 365;
+    return totalYearlyVisitors
 };
 
-Park.prototype.totalYearlyTicketSales = function(){
-    let totalDailyVisitors = 0;
-    for (let dinosaur of this.dinosaurStock){
-        totalDailyVisitors += dinosaur.averageVisitors;
-    };
-    let totalVisitors = totalDailyVisitors * 365;
-    return totalVisitors * 20;
+Park.prototype.totalYearlyTicketSales = function(ParkTotalYearlyVisitors){
+    let totalYearlyTicketSales = ParkTotalYearlyVisitors * this.ticketPrice;
+    return totalYearlyTicketSales;
 };
+
+
+
+// prior to edit returned this.dinosaurstock not iterable
+// Park.prototype.totalYearlyVisitors = function(){
+//     let totalDailyVisitors = 0;
+//     for (let dinosaur of this.dinosaurStock){
+//         totalDailyVisitors += dinosaur.averageVisitors;
+//     };
+//     return totalDailyVisitors * 365;
+// };
+
+// Park.prototype.totalYearlyTicketSales = function(){
+//     let totalDailyVisitors = 0;
+//     for (let dinosaur of this.dinosaurStock){
+//         totalDailyVisitors += dinosaur.averageVisitors;
+//     };
+//     let totalVisitors = totalDailyVisitors * 365;
+//     return totalVisitors * 20;
+// };
 
 
 

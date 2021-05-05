@@ -10,14 +10,14 @@ describe('Dinosaur', function() {
     });
 
     it('Should have a species', function(){
-        assert.strictEqual('t-rex', dinosaur.species);
+        assert.strictEqual(dinosaur.species, 't-rex');
     });
 
     it('Should have a diet type', function(){
-        assert.strictEqual('carnivore', dinosaur.dietType);
+        assert.strictEqual(dinosaur.dietType, 'carnivore');
     });
 
     it('Should have an average visitors', function(){
-        assert.strictEqual(1000, dinosaur.averageVisitors);
+        assert.strictEqual(dinosaur.averageVisitors, 1000);
     });
 });

@@ -10,7 +10,7 @@ Park.prototype.addDinosaur = function(dinosaur){
 
 Park.prototype.removeDinosaur = function(dino){
     let dinosaurIndexNumber = 0;
-    for (let dinosaur of this.dinosaurStock){
+    for (const dinosaur of this.dinosaurStock){
         if (dinosaur === dino){
             break;
         }else{
@@ -21,8 +21,8 @@ Park.prototype.removeDinosaur = function(dino){
 }
 
 Park.prototype.findDinos = function(dinoSpecies){
-    let dinoList = [];
-    for (let dinosaur of this.dinosaurStock){
+    const dinoList = [];
+    for (const dinosaur of this.dinosaurStock){
         if (dinosaur.species === dinoSpecies){
             dinoList.push(dinosaur);
         }
@@ -32,7 +32,7 @@ Park.prototype.findDinos = function(dinoSpecies){
 
 Park.prototype.totalDailyVisitors = function(){
     let totalDailyVisitors = 0;
-    for (let dinosaur of this.dinosaurStock){
+    for (const dinosaur of this.dinosaurStock){
         totalDailyVisitors += dinosaur.averageVisitors;
     };
     return totalDailyVisitors;
